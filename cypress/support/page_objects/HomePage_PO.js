@@ -6,13 +6,11 @@ class HomePage_PO extends Base_PO {
         super.navigate("");
     }
 
-    clickOn_ContactUs_Button() {
-        cy.clickAndOpenLink_inSameTab('#contact-us')
+    elements = {
+        contactUsLink: () => cy.clickAndOpenLink_inSameTab('#contact-us'),
+        loginLink: () => cy.clickAndOpenLink_inSameTab('#login-portal')
     }
 
-    clickOn_Login_Button() {
-        cy.clickAndOpenLink_inSameTab('#login-portal')
-    }
 
 }
 

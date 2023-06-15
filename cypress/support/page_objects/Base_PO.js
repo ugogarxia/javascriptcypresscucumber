@@ -6,6 +6,14 @@ class Base_PO {
             })
     }
 
+    textBoxInput(objName, value) {
+        objName.type(value);
+    }
+
+    clickOnElement(objName) {
+        objName.click()
+    }
+
     getPageTittle() {
         return cy.title()
     }

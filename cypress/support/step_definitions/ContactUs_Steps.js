@@ -1,23 +1,28 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor"
+import ContactUS_PO from "../page_objects/ContactUs_PO";
+
+const contactUs = new ContactUS_PO();
 
 When('I type user information', () => {
-    cy.get('[name="first_name"]').type('Joe');
-    cy.get('[name="last_name"]').type('Son');
-    cy.get('[name="email"]').type('joeson@email.com');
-    cy.get('[name="message"]').type('this is a test message');
-    cy.get('[type="submit"]').click()
+    contactUs.textBoxInput(contactUs.elements.firstNameTextField(), "Joe")
+    contactUs.textBoxInput(contactUs.elements.lastNameTextField(), "Son")
+    contactUs.textBoxInput(contactUs.elements.emailTextField(), "joeson@email.com")
+    contactUs.textBoxInput(contactUs.elements.commentsTextField(), "this is a test message")
+    contactUs.clickOnElement(contactUs.elements.submitBUtton())
+
 
 })
 
 When('I type user information , first name {string}, last name {string}, email address {string} and message {string}', (firstName, lastName, emailAddress, message) => {
-    cy.get('[name="first_name"]').type(firstName);
-    cy.get('[name="last_name"]').type(lastName);
-    cy.get('[name="email"]').type(emailAddress);
-    cy.get('[name="message"]').type(message);
-    cy.get('[type="submit"]').click()
+    contactUs.textBoxInput(contactUs.elements.firstNameTextField(), firstName)
+    contactUs.textBoxInput(contactUs.elements.lastNameTextField(), lastName)
+    contactUs.textBoxInput(contactUs.elements.emailTextField(), emailAddress)
+    contactUs.textBoxInput(contactUs.elements.commentsTextField(), message)
+    contactUs.clickOnElement(contactUs.elements.submitBUtton())
+
 })
 
 Then('Successful contact submission message should appear {string}', (message) => {
-    cy.xpath('//h1|//body').contains(message)
+    contactUs.elements.confirmationMessage().contains(message)
 })
 
