@@ -1,4 +1,4 @@
-class Base_PO {
+class ActionsPerformer {
     navigate(path) {
         cy.fixture("config.json").then(
             (data) => {
@@ -17,5 +17,6 @@ class Base_PO {
     getPageTittle() {
         return cy.title()
     }
+
 }
-export default Base_PO;
+export default ActionsPerformer;

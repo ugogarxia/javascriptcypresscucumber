@@ -14,11 +14,11 @@ When('I type user information', () => {
 })
 
 When('I type user information , first name {string}, last name {string}, email address {string} and message {string}', (firstName, lastName, emailAddress, message) => {
-    contactUs.textBoxInput(contactUs.elements.firstNameTextField(), firstName)
-    contactUs.textBoxInput(contactUs.elements.lastNameTextField(), lastName)
-    contactUs.textBoxInput(contactUs.elements.emailTextField(), emailAddress)
-    contactUs.textBoxInput(contactUs.elements.commentsTextField(), message)
-    contactUs.clickOnElement(contactUs.elements.submitBUtton())
+    contactUs.elements.firstNameTextField().type(firstName)
+    contactUs.elements.lastNameTextField().type(lastName)
+    contactUs.elements.emailTextField().type(emailAddress)
+    contactUs.elements.commentsTextField().type(message)
+    contactUs.elements.submitBUtton().click()
 
 })
 

@@ -5,12 +5,12 @@ const loginPO = new Login_PO()
 let stub
 
 When('Enter user name {string} and password {string}', (userName, password) => {
-   loginPO.textBoxInput(loginPO.elements.userNameTextField(),userName)
-   loginPO.textBoxInput(loginPO.elements.userPasswordTextField(),password)
+   loginPO.elements.userNameTextField().type(userName)
+   loginPO.elements.userPasswordTextField().type(password)
    stub = cy.stub();
    cy.on('window:alert', stub)
-   loginPO.clickOnElement(loginPO.elements.loginButton())
-   
+   loginPO.elements.loginButton().click()
+
 
 })
 

@@ -1,6 +1,6 @@
-import Base_PO from "./Base_PO";
+import ActionsPerformer from "./ActionsPerformer";
 
-class ContactUS_PO extends Base_PO {
+class ContactUS_PO extends ActionsPerformer {
 
     elements = {
         commentsTextField: () => cy.get('[name="message"]'),
@@ -10,10 +10,6 @@ class ContactUS_PO extends Base_PO {
         submitBUtton: () => cy.get('[type="submit"]'),
         confirmationMessage:()=>cy.xpath('//h1|//body')
     }
-
-
-
-
 }
 
 export default ContactUS_PO
