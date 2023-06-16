@@ -9,7 +9,7 @@
     "contact-us-headed-chrome": "cypress run --headed --browser chrome --spec 'cypress/e2e/ContactUs.feature' && node cucumber-html-report.js",
     "login-headed-chrome": "cypress run --headed --browser chrome --spec 'cypress/e2e/Login.feature' && node cucumber-html-report.js",
     "smoke-headedless-chrome": "cypress run -e TAGS=\"@smoke\" && node cucumber-html-report.js",
-    "smoke-headed1-chrome": "cypress run -e TAGS=\"@smoke\" --headed && node cucumber-html-report.js",
+    "smoke-headed-chrome": "cypress run -e TAGS=\"@smoke\" --headed && node cucumber-html-report.js",
     "regression-headedless-chrome": "cypress run -e TAGS=\"@regression\" && node cucumber-html-report.js",
     "regression-headed-chrome": "cypress run -e TAGS=\"@regression\" --headed && node cucumber-html-report.js"
   },
@@ -21,10 +21,7 @@
     "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
     "cypress-xpath": "^2.0.1",
     "multiple-cucumber-html-reporter": "^3.4.0",
-    "ts-loader": "^9.4.3"
-  },
-  "dependencies": {
-    "-": "^0.0.1",
+    "ts-loader": "^9.4.3",
     "@badeball/cypress-cucumber-preprocessor": "^17.1.1"
   },
   "cypress-cucumber-preprocessor": {
