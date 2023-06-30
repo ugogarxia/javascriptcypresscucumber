@@ -6,5 +6,9 @@ Before({ tags: "@smoke" }, () => {
 })
 
 
+After({ tags: "@smoke" }, () => {
+    console.log("Test after smoke")
+})
+
 
 
