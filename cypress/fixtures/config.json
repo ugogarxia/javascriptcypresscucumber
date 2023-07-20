@@ -1,3 +1,4 @@
 {
-    "baseURL":"https://www.liverpool.com.mx/tienda/home"
+    "baseURLLiverPool":"https://www.liverpool.com.mx/tienda/home",
+    "baseURLUniversity":"http://www.webdriveruniversity.com/"
 }
