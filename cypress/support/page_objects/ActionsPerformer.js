@@ -1,9 +1,19 @@
 class ActionsPerformer {
-    navigate(path) {
+    
+    toLiverpoolNavigate(path) {
         cy.fixture("config.json").then(
             (data) => {
                 
-                cy.visit(data.baseURL + path).reload()
+                cy.visit(data.toLiverpoolNavigate+ path,{failOnStatusCode: false}).reload()
+            })
+    }
+
+    
+    toUniversityNavigate(path) {
+        cy.fixture("config.json").then(
+            (data) => {
+                
+                cy.visit(data.baseURLUniversity + path,{failOnStatusCode: false}).reload()
             })
     }
 

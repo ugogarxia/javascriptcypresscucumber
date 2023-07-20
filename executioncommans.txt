@@ -3,5 +3,6 @@ npx cypress run -e TAGS='@login or @contact-us' --headed
 npx cypress run -e TAGS='@smoke' --headed
 npx cypress run -e TAGS='(@login or @contact-us) and not @smoke' --headed
 npx cypress run cypress/e2e/*.feature --headed
+npx cypress run --headed --browser chrome --spec 'cypress/e2e/test.cy.spec.js
 
 npx cypress run -e TAGS='@search' --headed

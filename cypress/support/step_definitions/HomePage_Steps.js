@@ -6,7 +6,7 @@ const homePage = new HomePage_PO();
 const URLPage = ""
 
 Given('I navigate to the webdriver university home page', () => {
-    homePage.navigate(URLPage)
+    homePage.toUniversityNavigate(URLPage)
 })
 
 When('I click on the contact us button', () => {
@@ -23,7 +23,7 @@ When('User click on Login link', () => {
 
 
 Given('A user that open Livepool store online webpage',()=>{
-    homePage.navigate('')
+    homePage.toLiverpoolNavigate('')
 })
 
 Given('User that made search on Liverpool online store for   playstation 5',()=>{

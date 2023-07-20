@@ -6,18 +6,15 @@ import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild
 import { getScript } from "cypress/types/jquery";
 
 export default defineConfig({
-  
   e2e: {
     
-    specPattern: "**/*.feature",
+    watchForFileChanges:false,
+    specPattern: "**/*.{feature,spec.js}",
     async setupNodeEvents(
       on: Cypress.PluginEvents,
       config: Cypress.PluginConfigOptions
     ): Promise<Cypress.PluginConfigOptions> {
-      name:'chrome' 
-     
-
-    
+      name: "chrome";
 
       // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
       await addCucumberPreprocessorPlugin(on, config);
@@ -34,5 +31,11 @@ export default defineConfig({
     },
   },
 
-
+  component: {
+    devServer: {
+      framework: "angular",
+      bundler: "webpack",
+    },
+    specPattern: "**/*.cy.ts",
+  },
 });
