@@ -2,7 +2,8 @@ class ActionsPerformer {
     navigate(path) {
         cy.fixture("config.json").then(
             (data) => {
-                cy.visit(data.baseURL + path)
+                
+                cy.visit(data.baseURL + path).reload()
             })
     }
 

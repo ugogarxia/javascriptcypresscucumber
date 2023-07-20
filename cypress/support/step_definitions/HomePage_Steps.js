@@ -1,4 +1,4 @@
-import { Given, When } from "@badeball/cypress-cucumber-preprocessor"
+import { Given, When ,Then} from "@badeball/cypress-cucumber-preprocessor"
 import HomePage_PO from "../page_objects/HomePage_PO";
 
 
@@ -20,3 +20,20 @@ When('User click on Login link', () => {
     //cy.get('#login-portal').invoke('removeAttr', 'target').click()
     homePage.elements.loginLink()
 })
+
+
+Given('A user that open Livepool store online webpage',()=>{
+    homePage.navigate('')
+})
+
+Given('User that made search on Liverpool online store for   playstation 5',()=>{
+
+})
+
+When('Results are displayed validate the search return playstation 5 and playstation consoles',()=>{
+
+})
+
+Then('Then Select playstation 5 in the listed results',()=>{})
+
+Then('Validate the title and the price {string}',(price)=>{})

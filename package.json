@@ -16,13 +16,14 @@
   "author": "Hugo Garcia",
   "license": "ISC",
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^17.1.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
-    "cypress": "^12.14.0",
+    "cypress": "^12.16.0",
     "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
+    "cypress-plugin-api": "^2.11.1",
     "cypress-xpath": "^2.0.1",
     "multiple-cucumber-html-reporter": "^3.4.0",
-    "ts-loader": "^9.4.3",
-    "@badeball/cypress-cucumber-preprocessor": "^17.1.1"
+    "ts-loader": "^9.4.3"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": "cypress/support/step_definitions/**/*.js",

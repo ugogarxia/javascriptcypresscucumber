@@ -16,6 +16,7 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 import "cypress-cucumber-attach-screenshots-to-failed-steps"
+import 'cypress-plugin-api'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
